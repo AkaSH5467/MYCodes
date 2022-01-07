@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    int a;
+    
+    cin>>n;
+    
+    while(n--)
+    {
+        
+        cin>>a;
+        int s=0;
+        while(a!=0)
+        {
+            
+            s=s+(a%10); //finding the last digit
+            a=a/10;     //removing the last digit
+            
+        }
+       cout<<s<<endl;
+       
+    }
+}
