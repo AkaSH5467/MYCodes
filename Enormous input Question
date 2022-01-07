@@ -7,11 +7,11 @@
     {
         int n,k,a;
         cin>>n>>k;
-        int count=0;
-        while(n--)
+        int count=0;  //silly mistake
+        while(n--)  //learned something new
         {
             cin>>a;
-            if(a%k==0)
+            if(a%k==0) //main logic
             {
                 count++;
             }
