@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float y;
+    int x;
+    cin>>x>>y;
+   
+    
+   
+    
+    if(x%5==0.0&&y>=x+0.50)  //main logic
+    {
+        //transaction initiated
+       float z;
+        z=y-x-0.50;
+        cout<<z<<endl;
+        
+    }
+    else
+    {
+      
+        cout<<y;
+    }
+    
+    return 0;
+}
