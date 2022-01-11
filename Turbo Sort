@@ -1,0 +1,11 @@
+a=int(input())
+list = []
+
+for i in range(a):
+    ele=int(input())
+    list.append(ele)
+    
+R=sorted(list)
+for j in R:
+    print(j)
+  
