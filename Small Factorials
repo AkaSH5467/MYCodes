@@ -1,0 +1,16 @@
+def factorial(p):
+    if p>0:
+        
+        return p*factorial(p-1)
+    
+    else:
+        return 1
+    
+
+a=int(input())
+
+for i in range(a):
+    p=int(input())
+    s=0
+    s=factorial(p)
+    print(s)
