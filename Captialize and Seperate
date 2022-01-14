@@ -1,6 +1,5 @@
 /*this question asks us to print the string in different lines and we have to capitalize it*/
 
-
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -24,7 +23,7 @@ int main()
          {
             st[i]=upper(st[i]);
          }
-        cout<<st; 
+        cout<<st<<endl; 
         
     }
    
