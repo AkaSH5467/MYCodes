@@ -1,0 +1,70 @@
+#include<math.h>
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int s;
+    cin>>s;
+    
+    int t;
+    cin>>t;
+    
+    int a;
+    cin>>a;
+    
+    int b;
+    cin>>b;
+    
+    int n;
+    cin>>n;
+    int arr[n];
+   
+    
+    int m;
+    cin>>m;
+    int ar[m];
+    
+     
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    
+    
+    for(int j=0;j<m;j++)
+    {
+        cin>>ar[j];
+    }
+    
+    int resa[n];
+    int count=0;
+    
+    for(int k=0;k<m;k++)
+    {
+       resa[k]=arr[k]+a;
+        
+        if(resa[k]>=s && resb[p]<=t)
+        {
+            count++;
+        }
+    }
+    int resb[m];
+    int count2=0;
+    
+    for(int p=0;p<n;p++)
+    {
+        resb[p]=ar[p]+b;
+        
+        if(resb[p]<=t&&resb[p]>=s)
+        {
+            count2++;
+        }
+    }
+    
+    cout<<count<<endl;
+    cout<<count2<<endl;
+    
+    return 0;
+}
