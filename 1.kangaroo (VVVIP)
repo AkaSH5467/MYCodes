@@ -1,0 +1,30 @@
+string kangaroo(int x1, int v1, int x2, int v2) {
+    if(v1>v2)
+    {
+        int remain=((x1-x2)%(v2-v1));
+        
+        if(remain==0)
+        {
+           return "YES";
+           
+        }
+       
+    }
+    
+    return "NO";
+    
+
+}
+
+check pink notebook for detailed sol;
+
+d=s * t;
+x1=v * jump;
+
+x1 + v1 *j =  x2 + v2 * j
+v1 * j - v2 * j = x2 -x1
+j(v2-v1)=x2-x1
+j=(x2-x1)%(v2-v1)
+
+if(j==0)--> yes
+else ------> no
