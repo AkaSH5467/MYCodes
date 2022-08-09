@@ -1,0 +1,63 @@
+/*******************************************************Naive Approach**********************************************************************/
+#include <iostream>
+
+using namespace std;
+long long int gcd(int a , int b)
+{
+    int res = min(a,b);
+    
+    while(res>0)                                                            time complexity = O(min(a,b))
+                                                                            Space Complexity = O(1)
+    {
+        if(a%res==0 && b%res==0)
+        {
+        break;
+        }
+        
+        res--;
+    }
+    
+    return res;
+}
+
+int main()
+{
+    int n,m;
+    cin>>n>>m;
+    
+    
+    cout<<gcd(m,n)<<endl;
+
+    return 0;
+}
+/*************************************************************************Better Approach*****************************************************************/
+
+
+#include <iostream>
+
+using namespace std;
+long long int gcd(int a , int b)
+{
+    
+    
+    while((a%b)>0)                                                     a%b decreases the number at least 2 times of a , thereby the number is decreasing with 2 times its speed
+    {                                                                  time complexity will be O(log(min(a,b)))
+                                                                       space complexity will be O(1)
+        int R=a%b;
+        a=b;
+        b=R;
+    }
+    
+    return b;
+}
+
+int main()
+{
+    int n,m;
+    cin>>n>>m;
+    
+    
+    cout<<gcd(m,n)<<endl;
+
+    return 0;
+}
