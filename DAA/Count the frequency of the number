@@ -1,0 +1,59 @@
+/***********************************************************  NAIVE APPROACH ***************************************************************/
+#include<bits/stdc++.h>                                                                        Time complexity : O(n)
+using namespace std;                                                                            Space Complexity : O(1)
+
+
+int count(int arr[], int n, int num)
+{
+	int ans = 0;
+	for (int i=0; i<n; i++)
+		if (num == arr[i])
+		ans++;
+	return ans;
+}
+
+
+int main()
+{
+	int arr[] = {1, 2, 2, 2, 2, 3, 4, 7 ,8 ,8 };
+	int n = sizeof(arr)/sizeof(arr[0]);
+	int num = 2;
+	cout << count(arr, n, num);
+	return 0;
+}
+
+/**************************************************  Better Solution ***************************************************************************/
+
+//Used STL funnctions to calculate the occurence of the number.
+// Must be sorted
+                                                                    
+                                                                                                         TIme complexity : O(logn)
+                                                                                                         Space Complexity : O(1)
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int count(int arr[], int n, int num)
+{
+	int *low = lower_bound(arr,arr+n,num);
+	
+	if(low==(arr+n)||*low!=num)
+	{
+	    return 0;
+	}
+	
+	int *high = upper_bound(low,arr+n,num);
+	
+	return high-low;
+}
+
+
+int main()
+{
+	int arr[] = {1, 2, 2, 2, 2, 3, 4, 7 ,8 ,8 };
+	int n = sizeof(arr)/sizeof(arr[0]);
+	int num = 2;
+	cout << count(arr, n, num);
+	return 0;
+}
