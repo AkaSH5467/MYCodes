@@ -1,0 +1,33 @@
+import java.util.HashMap;
+import java.util.Scanner;
+public class Main {
+    public static void sum(Character c){
+        HashMap<Character, Integer[]> sat = new HashMap<>();
+        sat.put('a',new Integer[]{5, 6, 2, 4});
+        sat.put('b',new Integer[]{7, 8, 9});
+        sat.put('c',new Integer[]{10, 9, 8});
+        sat.put('d',new Integer[]{2, 3, 4});
+        
+        System.out.println(c +" = "+sat.get(c)[0]);
+        
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        while(true){
+            System.out.println("Enter 1 to proceed");
+            System.out.println("Enter 0 to exit");
+            int n = sc.nextInt();
+            if (n==1){
+                System.out.print("Enter a key: ");
+                char c = sc.next().charAt(0);
+                sum(c);
+            }
+            else if(n==0){
+                break;
+            }
+            else{
+                System.out.println("Error! Enter valid option.");
+            }
+        }
+    }
+}
