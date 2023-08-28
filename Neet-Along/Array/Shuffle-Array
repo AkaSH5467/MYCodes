@@ -1,0 +1,24 @@
+class Solution {
+public:
+    vector<int> shuffle(vector<int>& nums, int n) {
+        int i=0;
+        int j=n;
+        int k=j;
+        vector<int>v1;
+
+        while(i<k)
+        {
+            v1.push_back(nums[i]);
+            v1.push_back(nums[j]);
+            i++;j++;
+
+            if(j==nums.size())
+            {
+                break;
+            }
+
+        }
+
+ return v1;
+    }
+};
